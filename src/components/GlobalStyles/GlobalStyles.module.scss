@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 :root {
+    --black-nhat: rgb(128, 128, 137);
+    --black: rgb(39, 39, 42);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
