@@ -1,0 +1,74 @@
+{
+  "RECORDS": [
+    {
+      "id": 1,
+      "name": "Điện thoại chính hãng",
+      "parent_id": 0,
+      "slug": "dien-thoai-chinh-hang",
+      "image_path": "/storage/category/1/JpTSWEZlg4wmfFBGycMw.webp",
+      "image_name": "fe98a4afa2d3e5142dc8096addc4e40b.png.webp",
+      "created_at": "29/11/2023 00:30:37",
+      "updated_at": "29/11/2023 00:30:37"
+    },
+    {
+      "id": 2,
+      "name": "Đồ Chơi - Mẹ & Bé",
+      "parent_id": 0,
+      "slug": "do-choi-me-be",
+      "image_path": "/storage/category/1/4bir2awtRjc78nH1ibrC.webp",
+      "image_name": "226301adcc7660ffcf44a61bb6df99b7.png.webp",
+      "created_at": "19/1/2024 15:04:45",
+      "updated_at": "19/1/2024 15:04:45"
+    },
+    {
+      "id": 3,
+      "name": "NGON",
+      "parent_id": 0,
+      "slug": "ngon",
+      "image_path": "/storage/category/1/4nLIYXK6PT5PiDkLyHHG.webp",
+      "image_name": "d8b02f8a0d958c74539316e8cd437cbd.png.webp",
+      "created_at": "19/1/2024 15:05:42",
+      "updated_at": "19/1/2024 15:05:42"
+    },
+    {
+      "id": 4,
+      "name": "Làm Đẹp - Sức Khỏe",
+      "parent_id": 0,
+      "slug": "lam-dep-suc-khoe",
+      "image_path": "/storage/category/1/GX6dL5HJBITd6DBIGrIB.webp",
+      "image_name": "d7ca146de7198a6808580239e381a0c8.png.webp",
+      "created_at": "19/1/2024 15:06:01",
+      "updated_at": "19/1/2024 15:06:01"
+    },
+    {
+      "id": 5,
+      "name": "Điện Gia Dụng",
+      "parent_id": 0,
+      "slug": "dien-gia-dung",
+      "image_path": "/storage/category/1/AJwWgePFODAEK4AppHwz.webp",
+      "image_name": "e6ea3ffc1fcde3b6224d2bb691ea16a2.png.webp",
+      "created_at": "19/1/2024 15:06:17",
+      "updated_at": "19/1/2024 15:06:17"
+    },
+    {
+      "id": 6,
+      "name": "Thời trang nữ",
+      "parent_id": 0,
+      "slug": "thoi-trang-nu",
+      "image_path": "/storage/category/1/gnwxuyhhaZHLwW7eODxN.webp",
+      "image_name": "48cbaafe144c25d5065786ecace86d38.png.webp",
+      "created_at": "19/1/2024 15:06:32",
+      "updated_at": "19/1/2024 15:06:32"
+    },
+    {
+      "id": 7,
+      "name": "Thời trang nam",
+      "parent_id": 0,
+      "slug": "thoi-trang-nam",
+      "image_path": "/storage/category/1/3n3VhObQt3mgBb2iMPYK.webp",
+      "image_name": "384ca1a678c4ee93a0886a204f47645d.png.webp",
+      "created_at": "19/1/2024 15:06:49",
+      "updated_at": "19/1/2024 15:06:49"
+    }
+  ]
+}

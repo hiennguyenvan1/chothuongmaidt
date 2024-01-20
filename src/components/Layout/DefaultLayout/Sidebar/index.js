@@ -10,16 +10,24 @@ function Sidebar() {
     const [post, setpost] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch('https://jsonplaceholder.typicode.com/photos')
             .then((res) => res.json())
             .then((res) => setpost(res));
     }, []);
 
     return (
         <div className={cx('wrapper')}>
-            {tabs.map((pos1) => (
-                <button className={cx('class')}> {pos1}</button>
-            ))}
+            <p className={cx('content')}>Danh Mục</p>
+            <ul>
+                {tabs.map((pos1) => (
+                    <li className={cx('class')} key={pos1.id}>
+                        <img className={cx('image')} src={pos1.url} />
+                        <a href="" className={cx('title')}>
+                            {pos1}
+                        </a>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }
