@@ -12,7 +12,7 @@ function Home() {
     return (
         <ul>
             {post.map((post1) => (
-                <li key={post1.id}>{post1.name}</li>
+                <li key={post1.id}>{post1.body}</li>
             ))}
         </ul>
     );

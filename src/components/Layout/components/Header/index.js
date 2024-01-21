@@ -17,6 +17,10 @@ function Header() {
         }, 1500);
     }, []);
 
+    const handfind = () => {
+        console.log('click');
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -32,7 +36,9 @@ function Header() {
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
                     {/* <FontAwesomeIcon className={cx('loading')} icon={faSpinner} /> */}
-                    <button className={cx('search-btn')}>Tìm kiếm</button>
+                    <button className={cx('search-btn')} onClick={handfind}>
+                        Tìm kiếm
+                    </button>
                 </div>
                 <div className={cx('header-home')}>
                     <div className={cx('home')}>
