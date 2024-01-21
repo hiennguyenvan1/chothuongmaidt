@@ -1,5 +1,5 @@
-{
-  "RECORDS": [
+
+[
     {
       "id": 1,
       "name": "Điện thoại chính hãng",
@@ -71,4 +71,3 @@
       "updated_at": "19/1/2024 15:06:49"
     }
   ]
-}
