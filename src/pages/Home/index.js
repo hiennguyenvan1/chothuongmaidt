@@ -1,20 +1,28 @@
 import { useState, useEffect } from 'react';
 
+import styles from './Home.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
+
 function Home() {
     const [post, setpost] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/comments')
+        fetch('https://raw.githubusercontent.com/thanhcuon/shoppinglaravel/main/products.json')
             .then((res) => res.json())
             .then((res) => setpost(res));
     }, []);
 
     return (
-        <ul>
+        <div className={cx('wrapper')}>
             {post.map((post1) => (
-                <li key={post1.id}>{post1.body}</li>
+                <div className={cx('item')}>
+                    <img className={cx('item-image')} src={post1.feature_image_path} />
+                    <h4 className={cx('item-name')}>{post1.name}</h4>
+                </div>
             ))}
-        </ul>
+        </div>
     );
 }
 

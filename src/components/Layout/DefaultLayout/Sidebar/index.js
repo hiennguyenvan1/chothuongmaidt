@@ -21,7 +21,7 @@ function Sidebar() {
             <ul>
                 {post.map((pos1) => (
                     <li className={cx('class')} key={pos1.id}>
-                        <img className={cx('image')} src={pos1.image_path} />
+                        <img className={cx('image')} src={pos1.image_name} />
                         <a href="" className={cx('title')}>
                             {pos1.name}
                         </a>

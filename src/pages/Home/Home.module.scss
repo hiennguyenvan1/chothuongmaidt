@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 6px;
+}
+
+.item {
+    text-align: center;
+    padding: 10px 10px;
+    margin-right: 10px;
+    width: 25%;
+    height: 300px;
+}
+
+.item:last-child {
+    margin: none;
+}
+
+.item-image {
+    width: 90%;
+    height: 200px;
+}
+
+.item-name {
+    width: 90%;
+    height: 30px;
+    white-space: nowrap; /* Ngăn ngừa xuống dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
