@@ -14,7 +14,7 @@ import {
 
 const cx = classNames.bind(styles);
 
-function Search() {
+function Search({ children }) {
     return (
         <div className={cx('search')}>
             <input className={cx('search-input')} placeholder="Bạn tìm gì hôm nay" spellCheck={false} />
