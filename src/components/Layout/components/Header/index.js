@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import Tippy from '@tippyjs/react/headless';
+import 'tippy.js/animations/shift-away.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -33,7 +34,7 @@ function Header() {
         setInterval(() => {
             let index = Math.floor(Math.random() * random1.length);
             setrandomplaceholder(random1[index]);
-        }, 1500);
+        }, 3000);
     }, []);
 
     const handfind = () => {
@@ -47,25 +48,24 @@ function Header() {
 
     return (
         <header className={cx('wrapper')}>
-            <div className={cx('gird_1')}>
+            <div className={cx('gird')}>
                 <div className={cx('inner')}>
                     <div className={cx('logo')}>
-                        <img
-                            src="https://salt.tikicdn.com/ts/upload/c1/64/f7/4e6e925ea554fc698123ea71ed7bda26.png"
-                            alt="shopee"
-                        />
-                        <div className={cx('sologor')}>
-                            <h3>Bảo vệ khách hàng 111%</h3>
-                        </div>
+                        <a href="">
+                            <img
+                                src="https://salt.tikicdn.com/ts/upload/c1/64/f7/4e6e925ea554fc698123ea71ed7bda26.png"
+                                alt="shopee"
+                            />
+                        </a>
                     </div>
                     <div className={cx('search-all')}>
                         <div className={cx('search')}>
                             <Tippy
                                 interactive
-                                placement="bottom"
-                                // visible={true}
+                                placement="bottom-start"
+                                visible={true}
                                 render={(attrs) => (
-                                    <div className={cx('render-icon')}>
+                                    <div className={cx('search-item')}>
                                         <h4>Hàng nhập khẩu</h4>
                                         {post.map((item) => (
                                             <AccountItem data={item} />
@@ -90,39 +90,7 @@ function Header() {
                                 Tìm kiếm
                             </button>
                         </div>
-                        <div>
-                            <br />
-                            <div>
-                                <ul className={cx('list-ul')}>
-                                    <li className={cx('list-li')}>
-                                        <a className={cx('list-a')} href="">
-                                            điện gia dụng
-                                        </a>
-                                        <a className={cx('list-a')} href="">
-                                            xe cộ
-                                        </a>
-                                        <a className={cx('list-a')} href="">
-                                            mẹ & bé
-                                        </a>
-                                        <a className={cx('list-a')} href="">
-                                            điện gia dụng
-                                        </a>
-                                        <a className={cx('list-a')} href="">
-                                            nhà cửa
-                                        </a>
-                                        <a className={cx('list-a')} href="">
-                                            sách
-                                        </a>
-                                        <a className={cx('list-a')} href="">
-                                            thể thao
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={cx('header-home1')}>
-                        <div className={cx('header-home')}>
+                        <div className={cx('search-icon')}>
                             <div className={cx('home')}>
                                 <a href="" className={cx('home-a')}>
                                     <img src="https://salt.tikicdn.com/ts/upload/32/56/db/d919a4fea46f498b5f4708986d82009d.png" />
@@ -131,29 +99,42 @@ function Header() {
                             </div>
                             <div className={cx('account')}>
                                 <a href="" className={cx('home-a')}>
-                                    <FontAwesomeIcon className={cx('home-icon')} icon={faFaceSmileWink} />
+                                    <img src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png" />
                                     Tài khoản
                                 </a>
                             </div>
+
                             <Tippy
                                 interactive
-                                placement="top-end"
+                                placement="bottom-start"
                                 render={(attrs) => <div className={cx('test')}>ádasd</div>}
                             >
                                 <div className={cx('shopping-cart')}>
                                     <a href="" className={cx('home-a')}>
-                                        <FontAwesomeIcon icon={faCartShopping} />
+                                        <img src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png" />
                                     </a>
                                 </div>
                             </Tippy>
                         </div>
-                        <br />
-                        <div className={cx('home-end')}>
-                            <FontAwesomeIcon icon={faLocationDot} />
-                            <p>Giao đến</p>
-
-                            <a href="">Xóm nam,Liên vị,Quảng yên</a>
-                        </div>
+                    </div>
+                </div>
+                <div className={cx('bottom')}>
+                    <div className={cx('sologor')}>
+                        <h3>Bảo vệ khách hàng 111%</h3>
+                    </div>
+                    <div className={cx('list-item')}>
+                        <ul className={cx('list-item-ul')}>
+                            {random1.map((item) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={cx('bottom-end')}>
+                        <a className={cx('bottom-end-a')} href="">
+                            <img src="https://salt.tikicdn.com/ts/upload/88/5c/9d/f5ee506836792eb7775e527ef8350a44.png" />
+                            <p>Giao đến : </p>
+                            <h4>Thôn nam1, Liên Vị, Quảng Yên q </h4>
+                        </a>
                     </div>
                 </div>
             </div>

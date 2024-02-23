@@ -1,8 +1,8 @@
 .wrapper {
     display: flex;
     align-items: center;
-    padding-left: 30px;
     height: 70px;
+    width: 955px;
 }
 
 .image {
@@ -13,4 +13,9 @@
 .name {
     padding-left: 20px;
     font-size: 2rem;
+}
+
+.wrapper:hover {
+    background-color: var(--hover-button);
+    margin-left: -10px;
 }
