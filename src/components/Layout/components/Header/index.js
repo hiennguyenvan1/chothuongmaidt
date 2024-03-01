@@ -23,6 +23,7 @@ function Header() {
     const [text, settext] = useState();
     const inputRef = useRef();
     const [post, setpost] = useState([]);
+    const [gotoshow, setgotoshow] = useState([]);
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/hiennguyenvan1/chothuongmaidt/main/categories.json')
@@ -51,7 +52,7 @@ function Header() {
             <div className={cx('gird')}>
                 <div className={cx('inner')}>
                     <div className={cx('logo')}>
-                        <a href="">
+                        <a href="/">
                             <img
                                 src="https://salt.tikicdn.com/ts/upload/c1/64/f7/4e6e925ea554fc698123ea71ed7bda26.png"
                                 alt="shopee"
@@ -63,12 +64,18 @@ function Header() {
                             <Tippy
                                 interactive
                                 placement="bottom-start"
-                                visible={true}
+                                // visible={true}
                                 render={(attrs) => (
                                     <div className={cx('search-item')}>
-                                        <h4>Hàng nhập khẩu</h4>
+                                        <div className={cx('search-sologor')}>
+                                            <h4>Sale Lương về</h4>
+                                        </div>
                                         {post.map((item) => (
-                                            <AccountItem data={item} />
+                                            <div className={cx('search-data')}>
+                                                <a href="">
+                                                    <AccountItem data={item} />
+                                                </a>
+                                            </div>
                                         ))}
                                     </div>
                                 )}
@@ -86,9 +93,9 @@ function Header() {
                                 <FontAwesomeIcon icon={faCircleXmark} />
                             </button>
                             {/* <FontAwesomeIcon className={cx('loading')} icon={faSpinner} /> */}
-                            <button className={cx('search-btn')} onClick={handfind}>
-                                Tìm kiếm
-                            </button>
+                            <div className={cx('search-btn')}>
+                                <button onClick={handfind}>Tìm kiếm</button>
+                            </div>
                         </div>
                         <div className={cx('search-icon')}>
                             <div className={cx('home')}>
@@ -125,7 +132,9 @@ function Header() {
                     <div className={cx('list-item')}>
                         <ul className={cx('list-item-ul')}>
                             {random1.map((item) => (
-                                <li>{item}</li>
+                                <li>
+                                    <a href="/menu_item">{item}</a>
+                                </li>
                             ))}
                         </ul>
                     </div>

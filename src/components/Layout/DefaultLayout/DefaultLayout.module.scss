@@ -7,9 +7,16 @@
 
 .container {
     margin-top: 20px;
-    width: 1400px;
-    min-height: 1000px;
     display: flex;
+}
+
+.container-item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.silde {
+    width: 20%;
 }
 
 .content {

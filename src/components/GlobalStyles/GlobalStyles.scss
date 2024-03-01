@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 :root {
-    --black-nhat2: rgb(221, 221, 227);
+    --black-nhat: #27272a;
     --black: rgb(39, 39, 42);
     --white: #ffffff;
     --sologor: rgb(0, 62, 161);
@@ -27,7 +27,17 @@ body {
 }
 
 .gird {
-    width: 1600px;
+    width: 1400px;
     max-width: 100%;
+    margin: 0 auto;
+}
+
+.gird-2 {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.gird-10 {
+    width: 1280;
     margin: 0 auto;
 }

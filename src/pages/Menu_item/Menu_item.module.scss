@@ -1,0 +1,55 @@
+.wrapper {
+    background-color: rgba(245, 245, 250, 1);
+}
+
+.menu {
+    padding-top: 10px;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.menu-list {
+    margin-right: 20px;
+    width: 20%;
+    padding-right: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.danhmuc_sp {
+    padding-left: 15px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.dich-vu {
+    padding-left: 15px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.danh-gia {
+    padding-left: 15px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.h3 {
+    color: var(--black-nhat);
+    font-weight: 410;
+}
+.ul {
+    padding-top: 10px;
+}
+
+.li {
+    list-style: none;
+}
+
+.a {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--black-nhat);
+}
+
+.content {
+    flex: 1;
+    background-color: aqua;
+}

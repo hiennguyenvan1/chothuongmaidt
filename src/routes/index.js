@@ -9,6 +9,7 @@ import Following from '~/pages/Following';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Admin from '~/components/Admin/';
+import Menu_item from '~/pages/Menu_item';
 
 //public Routes
 const publicRoutes = [
@@ -17,6 +18,7 @@ const publicRoutes = [
     { path: '/upload', component: Upload, layout: HeaderOnly },
     { path: '/search', component: Search, layout: null },
     { path: '/admin', component: Admin },
+    { path: '/menu_item', component: Menu_item, layout: HeaderOnly },
 ];
 const privateRoutes = [];
 
