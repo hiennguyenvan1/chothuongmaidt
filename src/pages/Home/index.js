@@ -9,31 +9,36 @@ import {
     faChevronCircleLeft,
     faChevronCircleRight,
 } from '@fortawesome/free-solid-svg-icons';
+import 'react-slideshow-image/dist/styles.css';
+import { Fade, Zoom, Slide } from 'react-slideshow-image';
 
 const cx = classNames.bind(styles);
 
-const Image1 = [
-    {
-        url: 'https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/273212604_666273484565577_7339715495513323540_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=FK6QEw1nA2cAX8LJnpK&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAtMdDW3f-j3FZR0QyFigMc4wFTSiOJNxWSdO7pjXBbYg&oe=65E66666',
-        cap: 'hien dep trai',
-    },
-    {
-        url: 'https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/305585590_802594887600102_512154020363835148_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=hQpy90h1n5kAX-k24yI&_nc_oc=AQnTYLB7Vzz51cLg9IJp3p2Yq2Z4iCRDhD6Ufg7iztyJLpyeFCO2hAxhJnEm49xBGy7QMigbHcjqpXJWVBjyQ5qg&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAxfXC_goHbjzGRihqm6Mm9lSk1OvGaVw75iJTOk0ef2g&oe=65E7104C',
-        cap: 'hien dep trai',
-    },
-    {
-        url: 'https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/305585590_802594887600102_512154020363835148_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=hQpy90h1n5kAX-k24yI&_nc_oc=AQnTYLB7Vzz51cLg9IJp3p2Yq2Z4iCRDhD6Ufg7iztyJLpyeFCO2hAxhJnEm49xBGy7QMigbHcjqpXJWVBjyQ5qg&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAxfXC_goHbjzGRihqm6Mm9lSk1OvGaVw75iJTOk0ef2g&oe=65E7104C',
-        cap: 'hien dep trai',
-    },
-    {
-        url: 'https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/305585590_802594887600102_512154020363835148_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=hQpy90h1n5kAX-k24yI&_nc_oc=AQnTYLB7Vzz51cLg9IJp3p2Yq2Z4iCRDhD6Ufg7iztyJLpyeFCO2hAxhJnEm49xBGy7QMigbHcjqpXJWVBjyQ5qg&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAxfXC_goHbjzGRihqm6Mm9lSk1OvGaVw75iJTOk0ef2g&oe=65E7104C',
-        cap: 'hien dep trai',
-    },
-];
-
 const Image = [
-    'https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/273212604_666273484565577_7339715495513323540_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=FK6QEw1nA2cAX8LJnpK&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAtMdDW3f-j3FZR0QyFigMc4wFTSiOJNxWSdO7pjXBbYg&oe=65E66666',
-    'tuyen',
+    {
+        name: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/18/86/9c/35860ead040e2941eca289a0c6bc35a2.jpg.webp',
+        name1: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/df/de/96/1ea52812607a87dcadc54091529eba0a.jpeg.webp',
+    },
+    {
+        name: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/65/ff/b3/3f13b95b4261255cf743af3188cdc91a.png.webp',
+        name1: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/df/de/96/1ea52812607a87dcadc54091529eba0a.jpeg.webp',
+    },
+    {
+        name: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/18/86/9c/35860ead040e2941eca289a0c6bc35a2.jpg.webp',
+        name1: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/df/de/96/1ea52812607a87dcadc54091529eba0a.jpeg.webp',
+    },
+    {
+        name: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/65/ff/b3/3f13b95b4261255cf743af3188cdc91a.png.webp',
+        name1: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/df/de/96/1ea52812607a87dcadc54091529eba0a.jpeg.webp',
+    },
+    {
+        name: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/18/86/9c/35860ead040e2941eca289a0c6bc35a2.jpg.webp',
+        name1: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/df/de/96/1ea52812607a87dcadc54091529eba0a.jpeg.webp',
+    },
+    {
+        name: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/65/ff/b3/3f13b95b4261255cf743af3188cdc91a.png.webp',
+        name1: 'https://salt.tikicdn.com/cache/w750/ts/tikimsp/df/de/96/1ea52812607a87dcadc54091529eba0a.jpeg.webp',
+    },
 ];
 
 function Home() {
@@ -47,9 +52,13 @@ function Home() {
     }, []);
 
     const handleprev = (index) => {
+        index++;
+        if (index < 0) {
+            index = Image.length - 1; // Chuyển đến phần tử cuối cùng nếu index nhỏ hơn 0
+        }
         setshowimage(Image[index]);
     };
-    console.log(showimage.cap);
+    console.log(setshowimage.Image);
 
     return (
         <div className={cx('wrapper')}>
@@ -57,24 +66,14 @@ function Home() {
                 <div className={cx('gird-10')}>
                     <div className={cx('container')}>
                         <div className={cx('container-slider')}>
-                            <div className={cx('prev-left')}>
-                                <span>
-                                    <FontAwesomeIcon icon={faAngleLeft} />
-                                </span>
-                            </div>
-                            {Image.length > 0 &&
-                                Image.map((item, index) => (
+                            <Slide>
+                                {Image.map((item, index) => (
                                     <div className={cx('slider-image')}>
-                                        <img src={item} />
+                                        <img className={cx('image')} src={item.name} />
+                                        <img className={cx('image1')} src={item.name1} />
                                     </div>
                                 ))}
-                            {/* <img src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/273212604_666273484565577_7339715495513323540_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=FK6QEw1nA2cAX8LJnpK&_nc_ht=scontent.fhan14-4.fna&oh=00_AfAtMdDW3f-j3FZR0QyFigMc4wFTSiOJNxWSdO7pjXBbYg&oe=65E66666" /> */}
-                            {/* <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/305585590_802594887600102_512154020363835148_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=hQpy90h1n5kAX-k24yI&_nc_oc=AQnTYLB7Vzz51cLg9IJp3p2Yq2Z4iCRDhD6Ufg7iztyJLpyeFCO2hAxhJnEm49xBGy7QMigbHcjqpXJWVBjyQ5qg&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAxfXC_goHbjzGRihqm6Mm9lSk1OvGaVw75iJTOk0ef2g&oe=65E7104C" /> */}
-                            <div className={cx('prev-right')}>
-                                <span onClick={handleprev}>
-                                    <FontAwesomeIcon icon={faAngleRight} />
-                                </span>
-                            </div>
+                            </Slide>
                         </div>
 
                         <div className={cx('container_width')}>
@@ -134,6 +133,40 @@ function Home() {
                                         <span>Đồ Chơi Mẹ & Bé</span>
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <div>
+                                <Slide>
+                                    <div className={cx('item')}>
+                                        <a href="/chitiet">
+                                            <img src="https://salt.tikicdn.com/cache/280x280/ts/product/2b/76/1c/6c89edecac5e58f346422c3a911934ea.jpg.webp" />
+                                            <span>Điện thoại Xiaomi Redmi Note 12 (8GB/128GB) - Hàng chính hãng</span>
+                                            <span>18.500.000đ</span>
+                                        </a>
+                                    </div>
+                                </Slide>
+                            </div>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <div>
+                                <Slide>
+                                    <div className={cx('item')}></div>
+                                </Slide>
+                            </div>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <div>
+                                <Slide>
+                                    <div className={cx('item')}></div>
+                                </Slide>
+                            </div>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <div>
+                                <Slide>
+                                    <div className={cx('item')}></div>
+                                </Slide>
                             </div>
                         </div>
                     </div>

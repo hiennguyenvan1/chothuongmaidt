@@ -26,7 +26,6 @@ function Sidebar() {
                         src="https://salt.tikicdn.com/cache/100x100/ts/category/ed/20/60/afa9b3b474bf7ad70f10dd6443211d5f.png"
                         alt="Mô tả ảnh"
                     />
-
                     <span>Nhà Sách Tiki</span>
                 </a>
             </div>

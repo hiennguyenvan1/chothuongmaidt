@@ -1,0 +1,19 @@
+.inner {
+    width: 100%;
+    display: flex;
+}
+
+.inner-left {
+    height: 1000px;
+    background-color: red;
+}
+
+.inner-center {
+    background-color: gold;
+    height: 500px;
+}
+
+.inner-right {
+    background-color: green;
+    height: 700px;
+}
