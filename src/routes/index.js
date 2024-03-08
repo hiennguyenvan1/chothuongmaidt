@@ -17,7 +17,7 @@ const publicRoutes = [
     { path: '/', component: Home },
     { path: '/following', component: Following },
     { path: '/upload', component: Upload, layout: HeaderOnly },
-    { path: '/chitiet', component: Chitiet, layout: HeaderOnly },
+    { path: '/chitiet/:idsp', component: Chitiet, layout: HeaderOnly },
     { path: '/search', component: Search, layout: null },
     { path: '/admin', component: Admin },
     { path: '/menu_item', component: Menu_item, layout: HeaderOnly },

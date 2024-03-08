@@ -1,4 +1,6 @@
+import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
@@ -42,23 +44,28 @@ const Image = [
 ];
 
 function Home() {
-    const [post, setpost] = useState([]);
-    const [showimage, setshowimage] = useState([]);
+    const [datasanpham, setdatasanpham] = useState([]);
+    // useEffect(() => {
+    //     fetch('https://raw.githubusercontent.com/thanhcuon/shoppinglaravel/main/products.json')
+    //         .then((res) => res.json())
+    //         .then((res) => setpost(res));
+    // }, []);
+
+    const fetchSanpham = async () => {
+        try {
+            const rs = await axios.get('http://localhost:3001/getSanpham');
+            if (rs.data) {
+                console.log(rs.data);
+                setdatasanpham(rs.data);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/thanhcuon/shoppinglaravel/main/products.json')
-            .then((res) => res.json())
-            .then((res) => setpost(res));
+        fetchSanpham();
     }, []);
-
-    const handleprev = (index) => {
-        index++;
-        if (index < 0) {
-            index = Image.length - 1; // Chuyển đến phần tử cuối cùng nếu index nhỏ hơn 0
-        }
-        setshowimage(Image[index]);
-    };
-    console.log(setshowimage.Image);
 
     return (
         <div className={cx('wrapper')}>
@@ -136,17 +143,100 @@ function Home() {
                             </div>
                         </div>
                         <div className={cx('container-item')}>
-                            <div>
-                                <Slide>
-                                    <div className={cx('item')}>
-                                        <a href="/chitiet">
-                                            <img src="https://salt.tikicdn.com/cache/280x280/ts/product/2b/76/1c/6c89edecac5e58f346422c3a911934ea.jpg.webp" />
-                                            <span>Điện thoại Xiaomi Redmi Note 12 (8GB/128GB) - Hàng chính hãng</span>
-                                            <span>18.500.000đ</span>
-                                        </a>
-                                    </div>
-                                </Slide>
-                            </div>
+                            <h2>Tiki Best</h2>
+                            <Slide>
+                                <div className={cx('item-all')}>
+                                    {datasanpham.map((item, index) => (
+                                        <div className={cx('item')}>
+                                            <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
+                                                <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
+                                                <p>{item.name}</p>
+
+                                                <span>
+                                                    {item.price} <sup>₫</sup>
+                                                </span>
+                                                <br />
+                                                <div className={cx('giaohang')}>
+                                                    <img src="https://salt.tikicdn.com/ts/tka/a8/31/b6/802e2c99dcce64c67aa2648edb15dd25.png" />
+                                                    <span>Giao siêu tốc 2h</span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Slide>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <h2>Tiki Best</h2>
+                            <Slide>
+                                <div className={cx('item-all')}>
+                                    {datasanpham.map((item, index) => (
+                                        <div className={cx('item')}>
+                                            <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
+                                                <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
+                                                <p>{item.name}</p>
+
+                                                <span>
+                                                    {item.price} <sup>₫</sup>
+                                                </span>
+                                                <br />
+                                                <div className={cx('giaohang')}>
+                                                    <img src="https://salt.tikicdn.com/ts/tka/a8/31/b6/802e2c99dcce64c67aa2648edb15dd25.png" />
+                                                    <span>Giao siêu tốc 2h</span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Slide>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <h2>Tiki Best</h2>
+                            <Slide>
+                                <div className={cx('item-all')}>
+                                    {datasanpham.map((item, index) => (
+                                        <div className={cx('item')}>
+                                            <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
+                                                <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
+                                                <p>{item.name}</p>
+
+                                                <span>
+                                                    {item.price} <sup>₫</sup>
+                                                </span>
+                                                <br />
+                                                <div className={cx('giaohang')}>
+                                                    <img src="https://salt.tikicdn.com/ts/tka/a8/31/b6/802e2c99dcce64c67aa2648edb15dd25.png" />
+                                                    <span>Giao siêu tốc 2h</span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Slide>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <h2>Tiki Best</h2>
+                            <Slide>
+                                <div className={cx('item-all')}>
+                                    {datasanpham.map((item, index) => (
+                                        <div className={cx('item')}>
+                                            <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
+                                                <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
+                                                <p>{item.name}</p>
+
+                                                <span>
+                                                    {item.price} <sup>₫</sup>
+                                                </span>
+                                                <br />
+                                                <div className={cx('giaohang')}>
+                                                    <img src="https://salt.tikicdn.com/ts/tka/a8/31/b6/802e2c99dcce64c67aa2648edb15dd25.png" />
+                                                    <span>Giao siêu tốc 2h</span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Slide>
                         </div>
                         <div className={cx('container-item')}>
                             <div>

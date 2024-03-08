@@ -9,8 +9,8 @@
 }
 
 .menu-list {
+    // width: 20%;
     margin-right: 20px;
-    width: 20%;
     padding-right: 10px;
     background-color: var(--white);
     border-radius: 10px;
@@ -32,24 +32,117 @@
 }
 
 .h3 {
-    color: var(--black-nhat);
-    font-weight: 410;
-}
-.ul {
-    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 1.6rem;
+    font-weight: 450;
 }
 
-.li {
-    list-style: none;
-}
+.danhmuc-tabbar {
+    .h3 {
+        font-size: 1.6rem;
+        color: var(--black-nhat);
+        font-weight: 410;
+    }
 
-.a {
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: var(--black-nhat);
+    .a {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: var(--black-nhat);
+    }
 }
 
 .content {
     flex: 1;
-    background-color: aqua;
+    background-color: var(--white);
+    border-radius: 12px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.content-top {
+    margin: 15px;
+}
+
+.content-slide {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.content-img {
+    display: flex;
+}
+
+.content-img1 {
+    line-height: 40px;
+    text-align: justify;
+    margin-bottom: 20px;
+    width: 50%;
+    display: flex;
+    border: 1px solid var(--hover-button);
+    border-radius: 12px;
+    height: 170px;
+
+    .content-thuonghieu {
+        background-color: rgba(241, 241, 241, 1);
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin: 30px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .content-cont {
+        padding: 10px;
+        .content-cont-slg {
+            p {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #38383d;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.content-ads {
+    img {
+        border: 1px solid var(--hover-button);
+        width: 64px;
+        height: 64px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+}
+
+.content-img2 {
+    height: 170px;
+    width: 50%;
+    margin-left: 10px;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+}
+
+.content-slidebar {
+    display: flex;
+
+    .content-slidebar-link {
+        margin-right: 20px;
+        color: var(--black);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .content-slidebar-link:hover {
+        border-bottom: 3px solid var(--sologor);
+    }
 }

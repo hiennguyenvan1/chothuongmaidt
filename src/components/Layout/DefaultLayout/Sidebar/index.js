@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import styles from './Sidebar.module.scss';
 import { useEffect, useState } from 'react';
 
@@ -22,25 +23,25 @@ function Sidebar() {
             </div>
             <div className={cx('item')}>
                 <a href="" className={cx('item-a')}>
-                    <img
-                        src="https://salt.tikicdn.com/cache/100x100/ts/category/ed/20/60/afa9b3b474bf7ad70f10dd6443211d5f.png"
-                        alt="Mô tả ảnh"
-                    />
-                    <span>Nhà Sách Tiki</span>
+                    <img src="https://salt.tikicdn.com/cache/100x100/ts/category/ed/20/60/afa9b3b474bf7ad70f10dd6443211d5f.png" />
+                    <span>Nhà sách Tiki </span>
                 </a>
             </div>
+
             <div className={cx('item')}>
                 <a href="" className={cx('item-a')}>
                     <img src="https://salt.tikicdn.com/cache/100x100/ts/category/f6/22/46/7e2185d2cf1bca72d5aeac385a865b2b.png" />
                     <span>Nhà cửa - đời sống</span>
                 </a>
             </div>
-            <div className={cx('item')}>
-                <a href="" className={cx('item-a')}>
-                    <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png" />
-                    <span>Điện thoại - máy tính</span>
-                </a>
-            </div>
+            <Link to={'/menu_item'}>
+                <div className={cx('item')}>
+                    <a href="" className={cx('item-a')}>
+                        <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png" />
+                        <span>Điện thoại - máy tính</span>
+                    </a>
+                </div>
+            </Link>
             <div className={cx('item')}>
                 <a href="" className={cx('item-a')}>
                     <img src="https://salt.tikicdn.com/cache/100x100/ts/category/13/64/43/226301adcc7660ffcf44a61bb6df99b7.png" />
