@@ -4,9 +4,11 @@
 :root {
     --black-nhat: #27272a;
     --black: rgb(39, 39, 42);
+    --black-nhat: rgb(128, 128, 137);
     --white: #ffffff;
     --sologor: rgb(0, 62, 161);
     --hover-button: rgb(236, 239, 247);
+    --border: 1px solid rgb(235, 235, 240);
 }
 
 * {
@@ -16,6 +18,8 @@
 }
 
 html {
+    line-height: 30px;
+    text-align: justify;
     font-size: 62.5%;
 }
 
@@ -29,6 +33,11 @@ body {
 .gird {
     width: 1400px;
     max-width: 100%;
+    margin: 0 auto;
+}
+
+.gird-1 {
+    width: 250px;
     margin: 0 auto;
 }
 
