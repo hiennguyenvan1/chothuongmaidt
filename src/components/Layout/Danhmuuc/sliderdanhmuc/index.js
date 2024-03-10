@@ -36,10 +36,10 @@ function Slide() {
                         <Link className={cx('content-slidebar-link')}>Phổ Biến</Link>
                         <Link className={cx('content-slidebar-link')}>Bán Chạy</Link>
                         <Link className={cx('content-slidebar-link')}>Hàng Mới</Link>
-                        <Link to={'/giacao'} className={cx('content-slidebar-link')}>
+                        <Link to={'/giathap'} className={cx('content-slidebar-link')}>
                             Giá Thấp Đến Cao
                         </Link>
-                        <Link to={'/giathap'} className={cx('content-slidebar-link')}>
+                        <Link to={'/giacao'} className={cx('content-slidebar-link')}>
                             Giá Cao Đến Thấp
                         </Link>
                     </div>
