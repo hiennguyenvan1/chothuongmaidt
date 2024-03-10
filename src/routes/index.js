@@ -1,7 +1,7 @@
 //admin
 
 // Layouts
-import { HeaderOnly } from '~/components/Layout';
+import { DanhMuc, HeaderOnly } from '~/components/Layout';
 
 //Pages
 import Home from '~/pages/Home';
@@ -10,7 +10,10 @@ import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Admin from '~/components/Admin/';
 import Chitiet from '~/pages/Chitiet';
-import Menu_item from '~/pages/Menu_item';
+import Giacao from '~/pages/DanhMuc/Giacao';
+import Giathap from '~/pages/DanhMuc/Giathap';
+
+import Renderdienthoai from '~/pages/DanhMuc/Render';
 
 //public Routes
 const publicRoutes = [
@@ -20,7 +23,9 @@ const publicRoutes = [
     { path: '/chitiet/:idsp', component: Chitiet, layout: HeaderOnly },
     { path: '/search', component: Search, layout: null },
     { path: '/admin', component: Admin },
-    { path: '/menu_item', component: Menu_item, layout: HeaderOnly },
+    { path: '/rendendienthoai', component: Renderdienthoai, layout: DanhMuc },
+    { path: '/giacao', component: Giacao, layout: DanhMuc },
+    { path: '/giathap', component: Giathap, layout: DanhMuc },
 ];
 
 const privateRoutes = [];

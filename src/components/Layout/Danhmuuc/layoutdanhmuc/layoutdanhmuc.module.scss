@@ -1,0 +1,54 @@
+.wrapper {
+    display: flex;
+    margin-top: 15px;
+}
+
+.menu {
+    padding-top: 10px;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.menu-list {
+    // width: 20%;
+    margin-right: 20px;
+    padding-right: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 1000px;
+}
+
+.danhmuc_sp {
+    padding-left: 15px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.dich-vu {
+    padding-left: 15px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.danh-gia {
+    padding-left: 15px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.h3 {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    font-weight: 450;
+}
+
+.danhmuc-tabbar {
+    .h3 {
+        font-size: 1.6rem;
+        color: var(--black-nhat);
+        font-weight: 410;
+    }
+
+    .a {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: var(--black-nhat);
+    }
+}

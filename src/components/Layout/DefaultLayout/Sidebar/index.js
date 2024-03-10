@@ -34,7 +34,7 @@ function Sidebar() {
                     <span>Nhà cửa - đời sống</span>
                 </a>
             </div>
-            <Link to={'/menu_item'}>
+            <Link to={'/rendendienthoai'}>
                 <div className={cx('item')}>
                     <a href="" className={cx('item-a')}>
                         <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png" />
