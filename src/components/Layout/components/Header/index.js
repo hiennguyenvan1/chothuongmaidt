@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/animations/shift-away.css';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -70,8 +71,8 @@ function Header() {
                                         <div className={cx('search-sologor')}>
                                             <h4>Sale Lương về</h4>
                                         </div>
-                                        {post.map((item) => (
-                                            <div className={cx('search-data')}>
+                                        {post.map((item, index) => (
+                                            <div className={cx('search-data')} key={index}>
                                                 <a href="">
                                                     <AccountItem data={item} />
                                                 </a>
@@ -111,17 +112,17 @@ function Header() {
                                 </a>
                             </div>
 
-                            <Tippy
+                            {/* <Tippy
                                 interactive
                                 placement="bottom-start"
                                 render={(attrs) => <div className={cx('test')}>ádasd</div>}
-                            >
-                                <div className={cx('shopping-cart')}>
-                                    <a href="" className={cx('home-a')}>
-                                        <img src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png" />
-                                    </a>
-                                </div>
-                            </Tippy>
+                            > */}
+                            <Link to={'/giohang'} className={cx('shopping-cart')}>
+                                <a href="" className={cx('home-a')}>
+                                    <img src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png" />
+                                </a>
+                            </Link>
+                            {/* </Tippy> */}
                         </div>
                     </div>
                 </div>

@@ -5,3 +5,24 @@
 .container-item {
     display: flex;
 }
+
+.menu-top {
+    display: flex;
+}
+
+.menu-top-right {
+    list-style: none;
+
+    margin: 5px 5px -8px 0px;
+    .link {
+        list-style: none;
+        text-decoration: none;
+        span {
+            color: var(--black-nhat);
+            font-size: 1.5rem;
+            .icon {
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -45,11 +45,6 @@ const Image = [
 
 function Home() {
     const [datasanpham, setdatasanpham] = useState([]);
-    // useEffect(() => {
-    //     fetch('https://raw.githubusercontent.com/thanhcuon/shoppinglaravel/main/products.json')
-    //         .then((res) => res.json())
-    //         .then((res) => setpost(res));
-    // }, []);
 
     const fetchSanpham = async () => {
         try {
@@ -75,7 +70,7 @@ function Home() {
                         <div className={cx('container-slider')}>
                             <Slide>
                                 {Image.map((item, index) => (
-                                    <div className={cx('slider-image')}>
+                                    <div className={cx('slider-image')} key={index}>
                                         <img className={cx('image')} src={item.name} />
                                         <img className={cx('image1')} src={item.name1} />
                                     </div>
@@ -136,22 +131,66 @@ function Home() {
                                     <a href="">
                                         <img src="https://salt.tikicdn.com/ts/category/13/64/43/226301adcc7660ffcf44a61bb6df99b7.png" />
                                         <br />
-
                                         <span>Đồ Chơi Mẹ & Bé</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div className={cx('container-item')}>
+                            <h2>Giá tốt hôm nay </h2>
+                            <Slide>
+                                <div className={cx('item-all')}>
+                                    {datasanpham.map((item, index) => (
+                                        <div className={cx('item')} key={index}>
+                                            <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
+                                                <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
+                                                <p>{item.name}</p>
+                                                <span>
+                                                    {item.price} <sup>₫</sup>
+                                                </span>
+                                                <br />
+                                                <div className={cx('giaohang')}>
+                                                    <img src="https://salt.tikicdn.com/ts/tka/a8/31/b6/802e2c99dcce64c67aa2648edb15dd25.png" />
+                                                    <span>Giao siêu tốc 2h</span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Slide>
+                        </div>
+                        <div className={cx('container-item')}>
+                            <h2>Thương hiệu chính hãng</h2>
+                            <Slide>
+                                <div className={cx('item-all')}>
+                                    {datasanpham.map((item, index) => (
+                                        <div className={cx('item')} key={index}>
+                                            <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
+                                                <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
+                                                <p>{item.name}</p>
+                                                <span>
+                                                    {item.price} <sup>₫</sup>
+                                                </span>
+                                                <br />
+                                                <div className={cx('giaohang')}>
+                                                    <img src="https://salt.tikicdn.com/ts/tka/a8/31/b6/802e2c99dcce64c67aa2648edb15dd25.png" />
+                                                    <span>Giao siêu tốc 2h</span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Slide>
+                        </div>
+                        <div className={cx('container-item')}>
                             <h2>Tiki Best</h2>
                             <Slide>
                                 <div className={cx('item-all')}>
                                     {datasanpham.map((item, index) => (
-                                        <div className={cx('item')}>
+                                        <div className={cx('item')} key={index}>
                                             <Link to={`/chitiet/${item._id}`} className={cx('item-a')}>
                                                 <img src={'http://localhost:3001/uploads/' + item.feature_image_path} />
                                                 <p>{item.name}</p>
-
                                                 <span>
                                                     {item.price} <sup>₫</sup>
                                                 </span>

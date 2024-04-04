@@ -12,6 +12,8 @@ import Admin from '~/components/Admin/';
 import Chitiet from '~/pages/Chitiet';
 import Giacao from '~/pages/DanhMuc/Giacao';
 import Giathap from '~/pages/DanhMuc/Giathap';
+import Giohang from '~/pages/Giohang';
+import Sanphamnew from '~/pages/DanhMuc/sanphamnew';
 
 import Renderdienthoai from '~/pages/DanhMuc/Render';
 
@@ -26,6 +28,8 @@ const publicRoutes = [
     { path: '/rendendienthoai', component: Renderdienthoai, layout: DanhMuc },
     { path: '/giacao', component: Giacao, layout: DanhMuc },
     { path: '/giathap', component: Giathap, layout: DanhMuc },
+    { path: '/giohang', component: Giohang, layout: HeaderOnly },
+    { path: '/sanphamnew', component: Sanphamnew, layout: DanhMuc },
 ];
 
 const privateRoutes = [];

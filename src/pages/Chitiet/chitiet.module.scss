@@ -89,6 +89,109 @@
     }
 }
 
+.giao-sieu-toc-top {
+    display: flex;
+
+    .giao-sieu-toc-img {
+        margin-right: 10 px;
+        img {
+            width: 30px;
+            height: 20px;
+        }
+    }
+
+    .giao-sieu-toc-content {
+    }
+}
+
+.dich-vu-bo-sung {
+    background-color: var(--white);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+
+    .conten-dich-vu {
+        margin: 10px 0px;
+        span {
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+    }
+
+    .dich-vu-link {
+        text-decoration: none;
+    }
+
+    .dich-vu-bo-sung-top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .dich-vu-bo-sung-top-uu-dai {
+            margin-left: 10px;
+            display: flex;
+            flex: 1 1 0%;
+            justify-content: space-between;
+            .uudai {
+                color: var(--black);
+                font-weight: 500;
+                line-height: 150%;
+            }
+
+            .dangky {
+                color: var(--sologor);
+            }
+        }
+    }
+}
+
+.sp-tuongtu {
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 200px;
+    background-color: var(--white);
+    .sp-content {
+        span {
+            color: var(--black);
+            font-weight: 500;
+        }
+    }
+}
+
+.slide-list-item {
+}
+
+// .sp-list-item {
+//     display: inline-block;
+// }
+
+.sp-list {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.sp-list-img {
+    img {
+        height: 100px;
+    }
+}
+
+.sp-list-name {
+    width: 100px;
+    span {
+        font-size: 1rem;
+    }
+}
+
 .inner-right {
     background-color: var(--white);
     height: auto;
@@ -151,6 +254,7 @@
 .inner-right-center-sl-input {
     input {
         margin-left: 10px;
+        padding-left: 15px;
         width: 40px;
         height: 30px;
         border-radius: 12px;
@@ -182,5 +286,8 @@
         border-radius: 12px;
         background-color: var(--white);
         border: 1px solid rgb(10, 104, 255);
+        color: rgb(10, 104, 255);
+        font-weight: 500;
+        font-size: 1.5rem;
     }
 }
